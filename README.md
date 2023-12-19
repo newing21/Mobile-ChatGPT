@@ -52,6 +52,8 @@ This is not affiliated with any existing mobile device company or telecom compan
 
 Feel free to contribute suggestions, bug reports, or feature requests via GitHub/forum/your preferred channel.
 
-## Contact
+## Statistics
+
+This extension currently has 55 downloads. 
 
 
