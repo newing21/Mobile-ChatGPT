@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Mobile ChatGPT",
+  "version": "2.1.1",
+  "description": "A Google Chrome extension that provides support for your Mobile related issues",
+  "icons": {},
+  "permissions": [
+    "https://api.openai.com/"
+  ],
+  "action": {
+    "default_popup": "popup1.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

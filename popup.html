@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My OpenAI Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="popup.js"></script>
+  <style>
+    .instructions {
+      color: #999;
+    }
+    .header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="cell_phone.png" alt="Logo">
+      <h1>Mobile Cellular ChatGPT</h1>
+    </div>
+    <div class="content">
+      <div class="input-group">
+        <input type="text" id="query" placeholder="How can we help?">
+        <button id="submit">Submit</button>
+      </div>
+      <div class="instructions">Enter your question above and click the "Submit" button to get an answer.</div>
+      <div id="output"></div>
+    </div>
+  </div>
+  <script>
+    const copyButton = document.getElementById('copy');
+    const outputDiv = document.getElementById('output');
+    const instructionsDiv = document.querySelector('.instructions');
+    const submitButton = document.getElementById('submit');
+
+    copyButton.addEventListener('click', () => {
+      const range = document.createRange();
+      range.selectNode(outputDiv);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+    });
+
+    submitButton.addEventListener('click', () => {
+      instructionsDiv.remove();
+    });
+  </script>
+</body>
+</html>
